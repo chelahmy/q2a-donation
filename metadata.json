@@ -1,0 +1,10 @@
+{
+	"name": "Donation",
+	"description": "Donate points to users paid by Waves-based tokens",
+	"version": "1.0",
+	"date": "2018-08-27",
+	"author": "Abdullah Daud",
+	"author_uri": "https://github.com/chelahmy",
+	"license": "GPLv2",
+	"min_q2a": "1.5",
+}
