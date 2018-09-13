@@ -173,18 +173,17 @@ class qa_donate_to_page {
 		$user = '<a href="' . qa_path('user/' . $handle) . '">' . $handle . '</a>';
 		$content['title'] = qa_lang_html_sub('plugin_donation_desc/donate_points_to', $user);
 
-		if (!isset($_REQUEST['txid']) || strlen($_REQUEST['txid']) <= 0) {
+		$req =  array_change_key_case($_REQUEST, CASE_LOWER);
+		
+		if (!isset($req['txid']) || strlen($req['txid']) <= 0) {
 			$content['custom'] = qa_lang_html('plugin_donation_desc/payment_error_no_txid');
 			return $content; 
 		}
 		
-		$txid = $_REQUEST['txid'];				
+		$txid = $req['txid'];				
 		$rate = qa_donation_point_rate($asset);
 		$amount = intval($points) * $rate;
 
-		//$content['custom'] = '<pre>' . $txid . ' - ' . print_r(wp_get_waves_tx_details($txid), true) . '</pre>';
-		//	return $content;
-		
 		if (function_exists('wp_is_valid_payment')) { // Query a Waves Pays plugin function
 			$stt = wp_is_valid_payment($txid, $asset, $amount);
 			if ($stt != 0) {
