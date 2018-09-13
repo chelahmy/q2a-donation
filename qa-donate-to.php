@@ -64,7 +64,7 @@ class qa_donate_to_page {
 
 			'fields' => array(
 				'points' => array(
-					'label' => qa_lang_html_sub('plugin_donation_desc/number_of_points_to_donate'),
+					'label' => qa_lang_html('plugin_donation_desc/number_of_points_to_donate'),
 					'type' => 'number',
 					'tags' => 'NAME="points" ID="points"',
 					'value' => $points,
@@ -74,7 +74,7 @@ class qa_donate_to_page {
 			'buttons' => array(
 				array(
 					'tags' => 'NAME="donate"',
-					'label' => qa_lang_html_sub('plugin_donation_desc/donate'),
+					'label' => qa_lang_html('plugin_donation_desc/donate'),
 				),
 			),
 		);
