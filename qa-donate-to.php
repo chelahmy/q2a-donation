@@ -153,11 +153,11 @@ class qa_donate_to_page {
 			'buttons' => array(
 				array(
 					'tags' => 'NAME="pay"',
-					'label' => qa_lang_html_sub('plugin_donation_desc/pay'),
+					'label' => qa_lang_html('plugin_donation_desc/pay'),
 				),
 				array(
 					'tags' => 'NAME="back"',
-					'label' => qa_lang_html_sub('plugin_donation_desc/back'),
+					'label' => qa_lang_html('plugin_donation_desc/back'),
 				),
 			),
 		);
